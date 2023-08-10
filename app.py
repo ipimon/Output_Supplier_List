@@ -2,6 +2,9 @@ import streamlit as st
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
+
+st.set_theme("dark")
+
 # Load the shapefile of Bangladesh's administrative boundaries
 shapefile_path = "path_to_your_shapefile/bangladesh_admin_boundaries.shp"  # Replace with the actual file path
 gdf = gpd.read_file(shapefile_path)
