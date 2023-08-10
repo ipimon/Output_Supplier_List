@@ -3,7 +3,13 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 
-st.set_theme("dark")
+def set_css():
+    # Load custom CSS
+    with open("styles.css") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Call the set_css function to apply the custom styles
+set_css()
 
 # Load the shapefile of Bangladesh's administrative boundaries
 shapefile_path = "path_to_your_shapefile/bangladesh_admin_boundaries.shp"  # Replace with the actual file path
